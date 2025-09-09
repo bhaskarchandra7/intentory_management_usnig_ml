@@ -1,0 +1,9 @@
+django
+pandas
+scikit-learn
+auto-sklearn
+tpot
+matplotlib
+prophet
+shap
+joblib

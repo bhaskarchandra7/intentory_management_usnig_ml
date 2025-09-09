@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="notifications-container">
+    <div class="notifications-header">
+        <h1>Notifications</h1>
+        <div class="notifications-actions">
+            <button class="mark-all-read">Mark All as Read</button>
+        </div>
+    </div>
+    
+    <div class="notifications-list">
+        {% if notifications %}
+            {% for notification in notifications %}
+            <div class="notification {% if not notification.is_read %}unread{% endif %}">
+                <div class="notification-icon">
+                    {% if notification.notification_type == 'stock_alert' %}⚠️
+                    {% elif notification.notification_type == 'sales_trend' %}📈
+                    {% else %}ℹ️{% endif %}
+                </div>
+                <div class="notification-content">
+                    <h3>{{ notification.message }}</h3>
+                    <div class="notification-meta">
+                        <span class="notification-type">{{ notification.notification_type|title }}</span>
+                        <span class="notification-time">{{ notification.created_at|timesince }} ago</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="no-notifications">
+                <p>You don't have any notifications yet</p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<style>
+    .notifications-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .notifications-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    
+    .notifications-header h1 {
+        color: var(--primary);
+        font-size: 2rem;
+    }
+    
+    .mark-all-read {
+        padding: 8px 16px;
+        background: var(--light);
+        color: var(--primary);
+        border: 1px solid var(--primary);
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .mark-all-read:hover {
+        background: var(--primary);
+        color: white;
+    }
+    
+    .notifications-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .notification {
+        display: flex;
+        background: var(--white);
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+    }
+    
+    .notification:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .notification.unread {
+        border-left: 4px solid var(--primary);
+        background: #f0f7ff;
+    }
+    
+    .notification-icon {
+        font-size: 1.5rem;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .notification-content {
+        flex: 1;
+    }
+    
+    .notification-content h3 {
+        margin-bottom: 8px;
+        color: var(--dark);
+    }
+    
+    .notification-meta {
+        display: flex;
+        gap: 15px;
+    }
+    
+    .notification-type {
+        background: var(--light);
+        color: var(--primary);
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    
+    .notification-time {
+        color: var(--gray);
+        font-size: 0.8rem;
+    }
+    
+    .no-notifications {
+        text-align: center;
+        padding: 40px;
+        color: var(--gray);
+        font-style: italic;
+    }
+</style>
+
+<script>
+    document.querySelector('.mark-all-read').addEventListener('click', function() {
+        // Implement mark all as read functionality
+        alert('Mark all as read functionality would be implemented here');
+    });
+</script>
+{% endblock %}

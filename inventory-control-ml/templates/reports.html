@@ -1,0 +1,260 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="header-section">
+        <h1 class="page-title">Business Intelligence Reports</h1>
+        <form method="post" action="{% url 'reports' %}" class="report-actions">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary btn-generate">
+                <i class="icon">📊</i> Generate New Report
+            </button>
+        </form>
+    </div>
+
+    {% if messages %}
+    <div class="alerts">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            <span class="alert-icon">
+                {% if message.tags == 'success' %}✅
+                {% elif message.tags == 'error' %}❌
+                {% else %}ℹ️{% endif %}
+            </span>
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if reports %}
+    <div class="report-grid">
+        {% for report in reports %}
+        <div class="report-card">
+            <div class="card-header">
+                <h3>{{ report.title }}</h3>
+                <span class="report-date">{{ report.generated_at|date:"M d, Y" }}</span>
+            </div>
+            <div class="card-body">
+                <div class="report-preview">
+                    {{ report.content|truncatewords:50 }}
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-outline">View Full Report</a>
+                <a href="#" class="btn btn-download">Download PDF</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <div class="empty-icon">📄</div>
+        <h3>No Reports Generated Yet</h3>
+        <p>Generate your first report to analyze your business data</p>
+        <form method="post" action="{% url 'reports' %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">
+                <i class="icon">📊</i> Generate Report
+            </button>
+        </form>
+    </div>
+    {% endif %}
+</div>
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .header-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .page-title {
+        color: var(--primary);
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .report-actions {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .alerts {
+        margin-bottom: 2rem;
+    }
+
+    .alert {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .alert-success {
+        background-color: #f0fdf4;
+        color: #166534;
+        border-left: 4px solid #22c55e;
+    }
+
+    .alert-error {
+        background-color: #fef2f2;
+        color: #991b1b;
+        border-left: 4px solid #ef4444;
+    }
+
+    .alert-info {
+        background-color: #eff6ff;
+        color: #1e40af;
+        border-left: 4px solid #3b82f6;
+    }
+
+    .alert-icon {
+        margin-right: 0.75rem;
+        font-size: 1.25rem;
+    }
+
+    .report-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .report-card {
+        background: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .report-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        padding: 1.25rem 1.5rem;
+        background-color: var(--primary);
+        color: white;
+    }
+
+    .card-header h3 {
+        margin: 0;
+        font-size: 1.25rem;
+    }
+
+    .report-date {
+        font-size: 0.875rem;
+        opacity: 0.9;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+        flex-grow: 1;
+    }
+
+    .report-preview {
+        line-height: 1.6;
+        color: #4b5563;
+    }
+
+    .card-footer {
+        padding: 1rem 1.5rem;
+        background-color: #f9fafb;
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.75rem;
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 3rem 2rem;
+        background: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        margin-top: 2rem;
+    }
+
+    .empty-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .empty-state h3 {
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .empty-state p {
+        color: #6b7280;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.625rem 1.25rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s;
+        border: none;
+    }
+
+    .btn-primary {
+        background-color: var(--primary);
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background-color: var(--secondary);
+    }
+
+    .btn-outline {
+        background: transparent;
+        border: 1px solid var(--primary);
+        color: var(--primary);
+    }
+
+    .btn-outline:hover {
+        background-color: #f0f7ff;
+    }
+
+    .btn-download {
+        background-color: #10b981;
+        color: white;
+    }
+
+    .btn-download:hover {
+        background-color: #059669;
+    }
+
+    .icon {
+        margin-right: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .header-section {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .report-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+{% endblock %}
