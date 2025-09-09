@@ -1,0 +1,21 @@
+date,product_id,product_name,category,current_stock,min_required,unit_price,sales_quantity
+2023-06-01,1001,Wireless Mouse,Electronics,15,20,24.99,5
+2023-06-01,1002,Bluetooth Headphones,Electronics,8,15,59.99,2
+2023-06-01,1003,Notebook,Office Supplies,50,30,4.99,12
+2023-06-02,1001,Wireless Mouse,Electronics,10,20,24.99,3
+2023-06-02,1004,Desk Lamp,Home Goods,12,10,29.99,1
+2023-06-03,1002,Bluetooth Headphones,Electronics,5,15,59.99,3
+2023-06-03,1005,Stapler,Office Supplies,25,20,8.99,8
+2023-06-04,1003,Notebook,Office Supplies,38,30,4.99,15
+2023-06-04,1006,Coffee Mug,Home Goods,30,25,12.99,4
+2023-06-05,1001,Wireless Mouse,Electronics,7,20,24.99,4
+2023-06-05,1007,USB Cable,Electronics,40,30,9.99,10
+2023-06-06,1004,Desk Lamp,Home Goods,11,10,29.99,0
+2023-06-06,1008,Notepad,Office Supplies,60,40,3.99,20
+2023-06-07,1005,Stapler,Office Supplies,17,20,8.99,6
+2023-06-07,1009,Monitor Stand,Electronics,5,8,39.99,1
+2023-06-08,1002,Bluetooth Headphones,Electronics,2,15,59.99,3
+2023-06-08,1010,Plant Pot,Home Goods,18,15,14.99,2
+2023-06-09,1006,Coffee Mug,Home Goods,26,25,12.99,2
+2023-06-09,1007,USB Cable,Electronics,30,30,9.99,8
+2023-06-10,1003,Notebook,Office Supplies,23,30,4.99,12

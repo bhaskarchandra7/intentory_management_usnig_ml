@@ -1,0 +1,6 @@
+product_id,product_name,category,current_stock,min_stock,unit_cost,selling_price,last_restock_date
+10001,Wireless Mouse V2,Electronics,142,50,18.99,29.99,2023-05-15
+10002,Mechanical Keyboard,Electronics,87,30,42.50,79.99,2023-06-02
+10003,Notebook A4,Office,356,100,1.20,2.99,2023-06-20
+...
+[1000+ rows of similar data]

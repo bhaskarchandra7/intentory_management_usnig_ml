@@ -1,0 +1,6 @@
+product_id,product_name,category,current_stock,min_required,unit_price
+1001,Wireless Mouse,Electronics,45,20,24.99
+1002,Keyboard,Electronics,32,15,35.50
+1003,Notebook,Office Supplies,120,50,2.99
+1004,Desk Lamp,Home Goods,18,10,29.95
+1005,Stapler,Office Supplies,56,30,8.49

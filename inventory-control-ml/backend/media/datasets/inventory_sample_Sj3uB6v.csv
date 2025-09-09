@@ -1,0 +1,11 @@
+product_id,product_name,category,current_stock,min_required,unit_price,sales_quantity,date
+1001,Wireless Mouse,Electronics,15,20,24.99,45,2023-01-15
+1002,Bluetooth Headphones,Electronics,8,15,59.99,32,2023-01-10
+1003,Notebook,Office Supplies,50,30,4.99,120,2023-01-05
+1004,Desk Lamp,Home Goods,12,10,29.99,18,2023-01-12
+1005,Stapler,Office Supplies,25,20,8.99,65,2023-01-08
+1006,Coffee Mug,Home Goods,30,25,12.99,40,2023-01-14
+1007,USB Cable,Electronics,40,30,9.99,85,2023-01-03
+1008,Notepad,Office Supplies,60,40,3.99,150,2023-01-07
+1009,Monitor Stand,Electronics,5,8,39.99,12,2023-01-11
+1010,Plant Pot,Home Goods,18,15,14.99,22,2023-01-09

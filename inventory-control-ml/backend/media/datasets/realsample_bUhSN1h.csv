@@ -1,0 +1,63 @@
+date,sales_quantity,product_name,current_stock,min_required,product_category,unit_price
+2025-01-01,15,Smartphone X,25,30,Phones,799.99
+2025-01-01,8,Wireless Earbuds Pro,18,15,Accessories,129.99
+2025-01-02,22,Smartphone X,20,30,Phones,799.99
+2025-01-02,12,Wireless Earbuds Pro,15,15,Accessories,129.99
+2025-01-03,18,Smartphone X,15,30,Phones,799.99
+2025-01-03,10,Tablet Air,35,20,Tablets,449.99
+2025-01-04,25,Smartphone X,12,30,Phones,799.99
+2025-01-04,15,Wireless Earbuds Pro,8,15,Accessories,129.99
+2025-01-05,30,Smartphone X,5,30,Phones,799.99
+2025-01-05,20,Laptop Pro,28,25,Computers,1299.99
+2025-01-06,12,Smartphone X,0,30,Phones,799.99
+2025-01-06,8,Wireless Charger,45,20,Accessories,39.99
+2025-01-07,5,Smartphone X,0,30,Phones,799.99
+2025-01-07,3,Tablet Air,30,20,Tablets,449.99
+2025-01-08,18,Smartphone X,50,30,Phones,749.99
+2025-01-08,25,Wireless Earbuds Pro,40,15,Accessories,119.99
+2025-01-09,22,Smartphone X,45,30,Phones,749.99
+2025-01-09,15,Laptop Pro,35,25,Computers,1249.99
+2025-01-10,20,Smartphone X,40,30,Phones,749.99
+2025-01-10,12,Smart Watch 3,28,20,Wearables,199.99
+2025-01-11,15,Smartphone X,35,30,Phones,749.99
+2025-01-11,8,Tablet Air,25,20,Tablets,449.99
+2025-01-12,28,Smartphone X,25,30,Phones,749.99
+2025-01-12,18,Wireless Earbuds Pro,30,15,Accessories,119.99
+2025-01-13,32,Smartphone X,15,30,Phones,749.99
+2025-01-13,22,Laptop Pro,25,25,Computers,1249.99
+2025-01-14,25,Smartphone X,5,30,Phones,749.99
+2025-01-14,15,Smart Watch 3,20,20,Wearables,199.99
+2025-01-15,18,Smartphone X,0,30,Phones,749.99
+2025-01-15,10,Tablet Air,15,20,Tablets,449.99
+2025-01-16,12,Smartphone X,0,30,Phones,749.99
+2025-01-16,7,Wireless Charger,35,20,Accessories,39.99
+2025-01-17,35,Smartphone X,50,30,Phones,699.99
+2025-01-17,28,Wireless Earbuds Pro,45,15,Accessories,109.99
+2025-01-18,42,Smartphone X,40,30,Phones,699.99
+2025-01-18,30,Laptop Pro,38,25,Computers,1199.99
+2025-01-19,38,Smartphone X,25,30,Phones,699.99
+2025-01-19,25,Smart Watch 3,30,20,Wearables,179.99
+2025-01-20,22,Smartphone X,15,30,Phones,699.99
+2025-01-20,15,Tablet Air,20,20,Tablets,429.99
+2025-01-21,18,Smartphone X,5,30,Phones,699.99
+2025-01-21,10,Wireless Earbuds Pro,12,15,Accessories,109.99
+2025-01-22,15,Smartphone X,0,30,Phones,699.99
+2025-01-22,8,Laptop Pro,25,25,Computers,1199.99
+2025-01-23,28,Smartphone X,40,30,Phones,699.99
+2025-01-23,20,Smart Watch 3,28,20,Wearables,179.99
+2025-01-24,32,Smartphone X,30,30,Phones,699.99
+2025-01-24,22,Tablet Air,25,20,Tablets,429.99
+2025-01-25,25,Smartphone X,20,30,Phones,699.99
+2025-01-25,15,Wireless Earbuds Pro,18,15,Accessories,109.99
+2025-01-26,18,Smartphone X,10,30,Phones,699.99
+2025-01-26,10,Laptop Pro,20,25,Computers,1199.99
+2025-01-27,12,Smartphone X,5,30,Phones,699.99
+2025-01-27,7,Wireless Charger,30,20,Accessories,39.99
+2025-01-28,8,Smartphone X,0,30,Phones,699.99
+2025-01-28,5,Smart Watch 3,15,20,Wearables,179.99
+2025-01-29,45,Smartphone X,60,30,Phones,649.99
+2023-01-29,35,Wireless Earbuds Pro,50,15,Accessories,99.99
+2025-01-30,50,Smartphone X,45,30,Phones,649.99
+2025-01-30,38,Laptop Pro,40,25,Computers,1149.99
+2025-01-31,42,Smartphone X,30,30,Phones,649.99
+2025-01-31,30,Smart Watch 3,35,20,Wearables,169.99

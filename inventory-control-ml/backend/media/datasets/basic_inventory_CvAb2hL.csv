@@ -1,0 +1,7 @@
+date,sales_quantity,product_name,current_stock,min_required
+2025-06-01,20,Product A,15,20
+2025-06-02,30,Product B,25,25
+2025-06-03,25,Product C,10,15
+2025-06-04,40,Product D,35,30
+2025-06-05,10,Product E,5,10
+2025-06-06,35,Product F,40,35

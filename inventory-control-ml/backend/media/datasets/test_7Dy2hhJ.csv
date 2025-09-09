@@ -1,0 +1,4 @@
+product_id,product_name,current_stock,min_required,sales_quantity
+1,Product A,45,50,12
+2,Product B,32,30,8
+3,Product C,28,25,5

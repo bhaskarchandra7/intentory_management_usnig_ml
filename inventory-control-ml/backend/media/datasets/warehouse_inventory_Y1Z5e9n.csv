@@ -1,0 +1,6 @@
+product_id,product_name,warehouse_A,warehouse_B,warehouse_C,total_stock
+3001,LED Bulbs,120,80,50,250
+3002,AA Batteries,300,150,100,550
+3003,USB Cables,95,45,30,170
+3004,Power Strips,60,40,20,120
+3005,HDMI Cables,75,35,25,135
